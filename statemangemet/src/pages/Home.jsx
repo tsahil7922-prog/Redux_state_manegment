@@ -1,7 +1,7 @@
 import React from "react";
 import UserData from "../component/userData.jsx";
 import { useDispatch } from "react-redux";
-import { fakeData } from "../utils/fakeData.js";
+import { fakeData } from "../api/index.js";
 
 const Home = () => {
     const dispatch = useDispatch();

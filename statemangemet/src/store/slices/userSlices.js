@@ -11,7 +11,7 @@ const userSlice = createSlice({
 
 
 // export these where u need to use 
-export const { addUser, removeUser, clearAllUser } = userSlice()
+// export const { addUser, removeUser, clearAllUser } = userSlice()
 
 // shows all the actions we made for useSlice
 console.log(userSlice.actions)
