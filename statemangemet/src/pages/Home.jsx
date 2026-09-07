@@ -2,13 +2,15 @@ import React from "react";
 import UserData from "../component/userData.jsx";
 import { useDispatch } from "react-redux";
 import { fakeData } from "../api/index.js";
-
+import { addUser } from "../store/slices/userSlices"
 const Home = () => {
     const dispatch = useDispatch();
 
     const addUser = () => {
         const user = fakeData();
-        console.log(user);
+        dispatch(addUser(user))
+
+        // console.log(user);
 
         // later:
         // dispatch(addUserAction(user));
