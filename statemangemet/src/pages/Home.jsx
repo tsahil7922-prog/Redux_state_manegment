@@ -6,7 +6,7 @@ import { addUser } from "../store/slices/userSlices"
 const Home = () => {
     const dispatch = useDispatch();
 
-    const addUser = () => {
+    const handleAddUser = () => {
         const user = fakeData();
         dispatch(addUser(user))
 
@@ -28,7 +28,7 @@ const Home = () => {
             >
                 <span style={{ fontWeight: "bold" }}>USER DATA</span>
 
-                <button onClick={addUser}>
+                <button onClick={handleAddUser}>
                     Add User
                 </button>
             </div>
