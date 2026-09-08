@@ -4,14 +4,18 @@ const userSlice = createSlice({
     initialState: [],
     reducers: {
         addUser: (state, action) => {
-            
+
             state.push(action.payload)
 
             // console.log(action.payload,"redux state store");
 
         },
-        removeUser: (state, action) => { },
-        clearAllUser: (state, action) => { },
+        removeUser: (state, action) => {
+            state.splice(action.payload, 1)
+        },
+        clearAllUser: (state, action) => { 
+            return []
+        },
 
     }
 })
