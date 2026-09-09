@@ -1,3 +1,3 @@
 import { createAction } from "@reduxjs/toolkit";
 
-const clearAllUserImport = createAction("clearAllUserType")
+export const clearAllUserImport = createAction("clearAllUserType")
