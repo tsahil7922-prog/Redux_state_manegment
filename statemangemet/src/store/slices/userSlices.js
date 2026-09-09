@@ -13,10 +13,18 @@ const userSlice = createSlice({
         removeUser: (state, action) => {
             state.splice(action.payload, 1)
         },
-        clearAllUser: (state, action) => { 
+        // if action handle by one reducer , use reducers
+        // if action handle by multiple reeducers use extrareducer
+        clearAllUser: (state, action) => {
             return []
         },
 
+    },
+    
+    extraReducers(builder) {
+        builder.addCase(userSlice.actions.clearAllUser, () => {
+            return []
+        })
     }
 })
 
