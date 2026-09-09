@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { clearAllUserImport } from '../../actions';
 const userSlice = createSlice({
     name: "user",
     initialState: [],
@@ -15,17 +16,32 @@ const userSlice = createSlice({
         },
         // if action handle by one reducer , use reducers
         // if action handle by multiple reeducers use extrareducer
+
+        // 1st step
         clearAllUser: (state, action) => {
             return []
         },
 
     },
-    
+    // advacned version 
+    // extraReducers(builder) {
+    //     builder.addCase(userSlice.actions.clearAllUser, () => {
+    //         return []
+    //     })
+    // },
+
+
+    // Advance pro max 
+    // same reducer used multiple slice used create action
     extraReducers(builder) {
-        builder.addCase(userSlice.actions.clearAllUser, () => {
+        builder.addCase(clearAllUserImport, () => {
             return []
+
         })
     }
+
+
+
 })
 
 

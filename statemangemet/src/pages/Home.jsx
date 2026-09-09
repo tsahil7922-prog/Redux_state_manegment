@@ -2,7 +2,9 @@ import React from "react";
 import UserData from "../component/userData.jsx";
 import { useDispatch } from "react-redux";
 import { fakeData } from "../api/index.js";
-import { addUser,clearAllUser } from "../store/slices/userSlices"
+import { addUser, clearAllUser } from "../store/slices/userSlices"
+import { clearAllUserImport } from "../actions/index.jsx";
+
 const Home = () => {
     const dispatch = useDispatch();
 
@@ -35,7 +37,8 @@ const Home = () => {
 
             <UserData />
 
-            <button onClick={()=>dispatch(clearAllUser())}>Clear All</button>
+
+            <button onClick={() => dispatch(clearAllUserImport())}>Clear All</button>
         </>
     );
 };
